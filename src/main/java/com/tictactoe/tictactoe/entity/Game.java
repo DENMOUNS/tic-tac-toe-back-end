@@ -80,7 +80,7 @@ public class Game {
         this.status = status;
     }
 
-    // Method to make a move
+    // Methode qui enregistre le mouvement
     public boolean makeMove(int index) {
         if (index < 0 || index >= board.size() || !board.get(index).isEmpty() || !status.equals("IN_PROGRESS")) {
             return false;
@@ -101,7 +101,7 @@ public class Game {
         return true;
     }
 
-    // Method to check if there is a win
+    // Methode pour savoir si quelqu'un a gagne
     private boolean checkWin() {
         String[][] winPatterns = {
             {board.get(0), board.get(1), board.get(2)},
